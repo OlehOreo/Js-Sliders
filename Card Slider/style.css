@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+	background-color: #2c3e50;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.back-link {
+	margin-bottom: 200px;
+	font-size: 35px;
+	text-decoration: none;
+	transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+	color: #ffffff;
+}
+.back-link:hover,
+.back-link:focus {
+	color: #c7e9ff;
+}
+.back-link:visited {
+	color: none;
+}
+
+.slider-container {
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 80vh;
+	max-width: 720px;
+	height: 230px;
+	border-radius: 10px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.slider-container .slider {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	width: 86%;
+	margin: auto;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.slider-container .slider .profile {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.slider-container .slider .info {
+	font-size: 18px;
+	text-align: justify;
+	color: #5f5f5f;
+}
+
+.slider-container .slider img {
+	width: 120px;
+	height: 120px;
+	object-fit: cover;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.slider-container .slider h3 {
+	color: #333;
+	font-size: 18px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.slider-container .slider .job {
+	color: #777;
+	font-weight: 500;
+	font-size: 14px;
+	text-wrap: nowrap;
+}
+
+.slider-container button {
+	font-size: 28px;
+	height: 48px;
+	width: 48px;
+	background-color: #fff;
+	border: none;
+	position: absolute;
+	color: #2c3e50;
+	cursor: pointer;
+	border-radius: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.slider-container button#next {
+	right: -26px;
+}
+
+.slider-container button#prev {
+	left: -26px;
+}
+
+@media screen and (max-width: 720px) {
+	.container {
+		height: 360px;
+		margin: 30px;
+	}
+
+	.container .slider {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.container .slider .profile {
+		flex-direction: column;
+		align-items: center;
+	}
+	.container button {
+		font-size: 30px;
+		height: 40px;
+		width: 40px;
+		border-radius: 15px;
+	}
+	.container button#next {
+		right: -2;
+	}
+
+	.container button#prev {
+		left: -2;
+	}
+}
